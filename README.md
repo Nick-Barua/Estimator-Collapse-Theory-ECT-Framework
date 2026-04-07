@@ -1,4 +1,6 @@
 # Estimator Collapse Theory (ECT) Framework
+## Version
+**v1.1.0** – Includes SMK validation video and completed Γ(t) instability validation (April 2026)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19450239.svg)](https://doi.org/10.5281/zenodo.19450239)
 
@@ -9,8 +11,11 @@ This repository provides the reference implementation and numerical validation s
 ## 📌 Abstract
 Estimator Collapse Theory (ECT) defines a new analytical regime in which ballistic mission kill emerges through state-estimator destabilisation rather than physical destruction. Unlike classical divergence analyses, this framework focuses on sub-threshold, gate-compliant perturbations that induce a **"Confidently Wrong"** failure regime. In this state, actual position error grows exponentially while the onboard filter reports deceptively stable internal covariance.
 
+## 🏷️ Keywords
+Estimator Collapse, Extended Kalman Filter, EKF instability, Nonlinear filtering, Control theory, Stochastic systems, Mission kill, State estimation
+
 ## 🧪 Minimal Constructive Demonstration
-The included `ekf_scalar_demo.py` reproduces the numerical results of **Section 2.5** of the manuscript. It demonstrates that a calibrated innovation bias can drive the **Estimator Instability Number** $\Gamma(t)$ above the critical collapse threshold $\Gamma_{crit} \approx 6.5$ within a standard 15-minute midcourse engagement window.
+The included `ekf_scalar_demo.py` reproduces the numerical results of **Section 2.5** of the associated manuscript. It demonstrates that a calibrated innovation bias can drive the **Estimator Instability Number** $\Gamma(t)$ above the critical collapse threshold $\Gamma_{crit} \approx 6.5$ within a standard 15-minute midcourse engagement window.
 
 ## 📊 Key Dimensionless Metrics
 The framework introduces four primary metrics to quantify the estimator-collapse regime:
@@ -30,6 +35,19 @@ High-resolution 600 DPI outputs from the analytical framework:
 ### Figure 5: CEP Expansion Pathways
 ![Figure 5](Figure5_CEP_Expansion_Pathways.png)
 *Comparative expansion pathways across threat classes, illustrating the **Sophistication Paradox**—where advanced GNC systems are more susceptible to estimator attack.*
+
+## 🎥 Stochastic Mission Kill (SMK) Validation
+
+A stochastic simulation demonstrating estimator collapse under bounded perturbations, validating the Γ(t)-based instability criterion:
+
+![SMK Demo](stochastic_mission_kill.mp4)
+
+## 🔗 Repository and Archival Record
+
+This GitHub repository contains the active development version of the ECT framework.  
+The corresponding archived and citable release is available on Zenodo:
+
+https://doi.org/10.5281/zenodo.19450239
 
 ## 🚀 Quick Start
 ```bash
