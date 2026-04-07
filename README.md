@@ -37,8 +37,7 @@ High-resolution 600 DPI outputs from the analytical framework:
 *Comparative expansion pathways across threat classes, illustrating the **Sophistication Paradox**—where advanced GNC systems are more susceptible to estimator attack.*
 
 ## 🎥 SMK Video
-
-[▶ Watch the SMK validation video](./media/stochastic_mission_kill.mp4)
+[▶ Watch the SMK validation video](./stochastic_mission_kill.mp4)
 
 ## 🔗 Repository and Archival Record
 
