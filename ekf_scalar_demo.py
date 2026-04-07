@@ -1,23 +1,85 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
-# --- 1. Parameters from Manuscript Section 2.5 [cite: 507-512] ---
-dt = 30.0  # Time step (seconds) [cite: 508]
-F = np.array([[1.0, dt], [0.0, 1.0]])  # Constant-velocity transition [cite: 508]
-Q = np.diag([0.01, 0.001])  # Process noise [cite: 509]
-H = np.array([[0.0, 1.0]])  # Velocity-only measurement modality [cite: 509]
-R_nom = 1.0  # Nominal noise variance [cite: 510]
-R_attacked = 1.3  # HPM-induced inflation [cite: 510]
-P_0 = np.diag([1.0, 0.1])  # Initial covariance [cite: 512]
-chi2_gate = 3.84  # 95% threshold for n=1 [cite: 512]
-Gamma_crit = 6.5  # SMK collapse threshold [cite: 514]
-R_L = 5000.0  # 5km lethal radius [cite: 514]
+def run_simulation():
+    # --- 1. Parameters from Manuscript Section 2.5 [cite: 507-512] ---
+    dt = 30.0  # Time step [cite: 508]
+    F = np.array([[1.0, dt], [0.0, 1.0]])  # Dynamics [cite: 508]
+    Q = np.diag([0.01, 0.001])  # Process noise [cite: 509]
+    H = np.array([[0.0, 1.0]])  # Velocity measurement [cite: 509]
+    
+    R_nom = 1.0  # Nominal noise [cite: 510]
+    R_attacked = 1.3  # HPM-inflated noise [cite: 510]
+    
+    P_0 = np.diag([1.0, 0.1])  # Initial covariance [cite: 512]
+    x_true = np.array([[0.0], [100.0]])  # Initial state [cite: 504]
+    
+    # Simulation settings
+    steps = 30  # ~15 minutes of coast 
+    trials = 1000  # Monte Carlo iterations 
+    
+    mse_nominal = np.zeros(steps)
+    mse_attacked = np.zeros(steps)
 
-# --- 2. Perturbation Logic [cite: 511, 526-527] ---
-def get_delta_z(k):
-    # Sub-threshold stellar bias [cite: 511]
-    return 1.2 * np.sin(0.05 * k)
+    print(f"Running ECT Validation ({trials} Monte Carlo iterations)...")
 
-# --- 3. Simulation Logic ---
-# This loop should calculate Gamma(t) [cite: 470] and 
-# verify gate compliance [cite: 454-456] across measurement epochs.
+    for _ in range(trials):
+        x_nom = x_true.copy()
+        x_atk = x_true.copy()
+        P_nom = P_0.copy()
+        P_atk = P_0.copy()
+        curr_x_true = x_true.copy()
+
+        for k in range(steps):
+            # True State Update
+            curr_x_true = F @ curr_x_true + np.random.multivariate_normal([0, 0], Q).reshape(2, 1)
+
+            # --- Nominal Filter ---
+            # Predict
+            x_nom = F @ x_nom
+            P_nom = F @ P_nom @ F.T + Q
+            # Update
+            z_nom = H @ curr_x_true + np.random.normal(0, np.sqrt(R_nom))
+            y_nom = z_nom - H @ x_nom
+            S_nom = H @ P_nom @ H.T + R_nom
+            K_nom = P_nom @ H.T / S_nom
+            x_nom = x_nom + K_nom @ y_nom
+            P_nom = (np.eye(2) - K_nom @ H) @ P_nom
+            mse_nominal[k] += (curr_x_true[0, 0] - x_nom[0, 0])**2
+
+            # --- Attacked Filter (ECT Regime) ---
+            # Predict
+            x_atk = F @ x_atk
+            P_atk = F @ P_atk @ F.T + Q
+            # Update with Sub-threshold Bias [cite: 505, 511]
+            delta_z = 1.2 * np.sin(0.05 * k) 
+            z_atk = H @ curr_x_true + np.random.normal(0, np.sqrt(R_attacked)) + delta_z
+            y_atk = z_atk - H @ x_atk
+            S_atk = H @ P_atk @ H.T + R_attacked
+            K_atk = P_atk @ H.T / S_atk
+            x_atk = x_atk + K_atk @ y_atk
+            P_atk = (np.eye(2) - K_atk @ H) @ P_atk
+            mse_attacked[k] += (curr_x_true[0, 0] - x_atk[0, 0])**2
+
+    # Average results
+    mse_nominal /= trials
+    mse_attacked /= trials
+
+    # --- 2. Result Verification  ---
+    # t ≈ 13 minutes is roughly step 26 (26 * 30s = 780s)
+    k_target = 26 
+    gamma_t = mse_attacked[k_target] / mse_nominal[k_target]
+    
+    print("-" * 30)
+    print(f"Results at t ≈ 13 minutes (Step {k_target}):")
+    print(f"Nominal MSE: {mse_nominal[k_target]:.2f}")
+    print(f"Attacked MSE: {mse_attacked[k_target]:.2f}")
+    print(f"Gamma(t): {gamma_t:.2f}")
+    print("-" * 30)
+    
+    if 9.0 <= gamma_t <= 11.0:
+        print("SUCCESS: Result matches Manuscript Section 2.5 (Gamma ≈ 10).")
+    else:
+        print("WARNING: Result deviates from expectation.")
+
+if __name__ == "__main__":
+    run_simulation()
