@@ -38,9 +38,8 @@ High-resolution 600 DPI outputs from the analytical framework:
 
 ## 🎥 Stochastic Mission Kill (SMK) Validation
 
-A stochastic simulation demonstrating estimator collapse under bounded perturbations, validating the Γ(t)-based instability criterion:
-
-![SMK Demo](stochastic_mission_kill.mp4)
+Watch the validation video here:  
+https://doi.org/10.5281/zenodo.19450239
 
 ## 🔗 Repository and Archival Record
 
