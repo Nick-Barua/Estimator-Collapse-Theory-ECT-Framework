@@ -46,6 +46,13 @@ The corresponding archived and citable release is available on Zenodo:
 
 https://doi.org/10.5281/zenodo.19450239
 
+## 📖 Citation
+
+If you use this work, please cite:
+
+Barua, N. (2026). *Estimator Collapse Theory: Stochastic Mission Kill for Ballistic Interception.*  
+Zenodo. https://doi.org/10.5281/zenodo.19450239
+
 ## 🚀 Quick Start
 ```bash
 # Clone the repository
