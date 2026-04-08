@@ -20,7 +20,7 @@ The included `ekf_scalar_demo.py` reproduces the numerical results of **Section 
 ## 📊 Key Dimensionless Metrics
 The framework introduces four primary metrics to quantify the estimator-collapse regime:
 
-* **$\Gamma(t)$**: The **Estimator Instability Number**, defined as the ratio of actual Mean Squared Error (MSE) of the position state estimate under attack to the nominal MSE.
+* **$\Gamma(t)$**: The **Estimator Instability Number**, defined as the ratio of actual Mean Squared Error (MSE) under perturbation to nominal MSE.
 * **MKI**: The **Mission Kill Index**, defined as the ratio of the expanded Circular Error Probable (CEP) to the lethal radius $R_L$.
 * **$\eta_{info}$**: The **Information-to-Energy Yield**, quantifying the uncertainty-generation efficiency of a perturbation mechanism using differential Shannon entropy $\Delta h(X)$.
 * **$\mathcal{R}_{IE}$**: The **Economic Reversal Ratio**, comparing the amortised cost of an SMK engagement to the unit cost of the threat.
@@ -50,7 +50,7 @@ High-resolution 600 DPI outputs from the analytical framework:
 
 ### Figure 6: Interception Economics
 ![Figure 6](Figure6_Interception_Economics.png)
-*Cost-per-engagement comparison. The SMK constellation is hypothesised to achieve economic reversal ($\mathcal{R}_{IE} < 1$) with an amortised engagement cost of **~$750K ($0.75M)**.*
+*Cost-per-engagement comparison. The SMK constellation is hypothesised to achieve economic reversal with an amortised engagement cost of **~$750K ($0.75M)**.*
 
 ## 🎥 SMK Video
 [▶ Watch the SMK validation video](./stochastic_mission_kill.mp4)
@@ -62,10 +62,6 @@ This GitHub repository contains the active development version of the ECT framew
 ## 📖 Citation
 If you use this work, please cite:
 > Barua, N. (2026). *Estimator Collapse Theory: Stochastic Mission Kill for Ballistic Interception*. Zenodo. https://doi.org/10.5281/zenodo.19450239
-
-**Associated References:**
-* [31] Lewis, G.N.; Postol, T.A. Video Evidence on the Effectiveness of the Patriot Missile Defense System. *Sci. Glob. Secur.* **1993**, *4*, 1–63.
-* [35] Pasqualetti, F.; Dörfler, F.; Bullo, F. Control-theoretic methods for cyber-physical security. *IEEE Trans. Control Netw. Syst.* **2014**, *1*, 50–71.
 
 ## 🚀 Quick Start
 ```bash
