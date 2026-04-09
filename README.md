@@ -2,7 +2,7 @@
 
 **Version:** v1.2.0 – Submission-Ready Release (April 2026)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19450239.svg)](https://doi.org/10.5281/zenodo.19450239)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19469720.svg)](https://doi.org/10.5281/zenodo.19469720)
 
 This repository provides the reference implementation and numerical validation scripts for the analytical framework formalised in:
 
