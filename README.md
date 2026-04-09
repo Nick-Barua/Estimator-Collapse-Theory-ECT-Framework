@@ -6,7 +6,7 @@
 
 This repository provides the reference implementation and numerical validation scripts for the analytical framework formalised in:
 
-> **Barua, N. (2026). Estimator Collapse Theory: Stochastic Mission Kill for Ballistic Interception.**
+> **Barua, N. (2026). The Sophistication Paradox: Estimator Collapse and Non-Kinetic Mission Denial in Precision-Guided Ballistic Systems **
 
 ## 📌 Abstract
 Estimator Collapse Theory (ECT) defines a new analytical regime in which ballistic mission kill emerges through state-estimator destabilisation rather than physical destruction. Unlike classical divergence analyses, this framework focuses on sub-threshold, gate-compliant perturbations that induce a **"Confidently Wrong"** failure regime. In this state, actual position error grows exponentially while the onboard filter reports deceptively stable internal covariance. This release assumes a baseline LEO architecture with 100 MW peak pulse power.
