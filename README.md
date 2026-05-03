@@ -1,78 +1,44 @@
-# Estimator Collapse Theory (ECT) Framework
+# The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures
 
-**Version:** v1.2.0 – Submission-Ready Release (April 2026)
+**Version:** v1.4.1 – Submission-Ready 3D Release (May 2026)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19469720.svg)](https://doi.org/10.5281/zenodo.19469720)
-
-This repository provides the reference implementation and numerical validation scripts for the analytical framework formalised in:
-
-> **Barua, N. (2026). The Sophistication Paradox: Estimator Collapse and Non-Kinetic Mission Denial in Precision-Guided Ballistic Systems **
+This repository provides the reference implementation and numerical validation scripts for the analytical framework formalised in the paper:  
+[cite_start]**"The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures"** (Barua, 2026)[cite: 973, 1215].
 
 ## 📌 Abstract
-Estimator Collapse Theory (ECT) defines a new analytical regime in which ballistic mission kill emerges through state-estimator destabilisation rather than physical destruction. Unlike classical divergence analyses, this framework focuses on sub-threshold, gate-compliant perturbations that induce a **"Confidently Wrong"** failure regime. In this state, actual position error grows exponentially while the onboard filter reports deceptively stable internal covariance. This release assumes a baseline LEO architecture with 100 MW peak pulse power.
+[cite_start]Estimator Collapse Theory (ECT) defines a formal regime in which navigation failure emerges through state-estimator destabilisation rather than physical destruction[cite: 977, 1214]. [cite_start]This framework identifies a class of sub-threshold perturbations—bounded measurement disturbances calibrated to remain within statistical gating thresholds—that can systematically corrupt the state estimate of an Extended Kalman Filter (EKF)[cite: 978, 1211]. [cite_start]This release provides empirical validation via 3D kinematic Monte Carlo simulation, demonstrating the "Confidently Wrong" failure mode where actual state error diverges whilst the onboard filter reports nominal consistency[cite: 982, 1223].
 
 ## 🏷️ Keywords
-Estimator Collapse Theory; Stochastic Mission Kill; Analytical Framework; State Estimation; Sensor Fusion; Guidance, Navigation, and Control; Systems Resilience; Covariance Divergence; Circular Error Probable; Economic Reversal Ratio; Mission Kill Index.
+Estimator Collapse Theory; Stochastic Mission Kill; Multi-sensor Fusion; GNC Robustness; Systems Resilience; Kalman Filter Consistency; [cite_start]Circular Error Probable[cite: 983].
 
-## 🧪 Minimal Constructive Demonstration
-The included `ekf_scalar_demo.py` reproduces the numerical results of **Section 2.5** of the manuscript. It demonstrates that a calibrated innovation bias can drive the **Estimator Instability Number** $\Gamma(t)$ above the critical collapse threshold $\Gamma_{crit} \approx 6.5$ within a standard 15-minute midcourse engagement window.
-
-## 📊 Key Dimensionless Metrics
-The framework introduces four primary metrics to quantify the estimator-collapse regime:
-
-* **$\Gamma(t)$**: The **Estimator Instability Number**, defined as the ratio of actual Mean Squared Error (MSE) under perturbation to nominal MSE.
-* **MKI**: The **Mission Kill Index**, defined as the ratio of the expanded Circular Error Probable (CEP) to the lethal radius $R_L$.
-* **$\eta_{info}$**: The **Information-to-Energy Yield**, quantifying the uncertainty-generation efficiency of a perturbation mechanism using differential Shannon entropy $\Delta h(X)$.
-* **$\mathcal{R}_{IE}$**: The **Economic Reversal Ratio**, comparing the amortised cost of an SMK engagement to the unit cost of the threat.
+## 🧪 3D Monte Carlo Validation (v1.4.1)
+[cite_start]The included `ECT_3D_Simulation_v141.py` reproduces the empirical results described in Section II-E of the manuscript[cite: 1063].
+* [cite_start]**Setup:** 3D kinematic EKF (6-state vector: $[x, y, z, v_x, v_y, v_z]^T$) with dual-sensor modality (GNSS and Range)[cite: 1065, 1067].
+* [cite_start]**Dynamics:** Constant-velocity model with sampling interval $\Delta t = 1$ s and process noise $Q = \text{diag}(0.01, 0.01, 0.01, 0.001, 0.001, 0.001)$[cite: 1065, 1066].
+* [cite_start]**Sample Size:** $N = 500$ Monte Carlo runs over a 1,200-second trajectory[cite: 1070].
+* **Findings:**
+    * **$\Gamma(t)$ Collapse Rate:** 100% (Estimator instability threshold $\Gamma_{crit} = 6.5$ exceeded in all runs).
+    * **NIS Gate Compliance:** 92–96% (Perturbations remained statistically inconspicuous to the 95% chi-squared gate).
+    * [cite_start]**Outcome:** Empirical confirmation of the gate-compliant divergence regime in high-dimensional state space[cite: 1070, 1076].
 
 ## 🖼️ Validation Figures
-High-resolution 600 DPI outputs from the analytical framework:
+* **Figure 2:** Temporal Evolution of $\Gamma(t)$ demonstrating 100% collapse rate.
 
-### Figure 1: The Drift-to-Fail Paradigm Shift
-![Figure 1](Figure1_Paradigm_Shift.png)
-*A conceptual illustration comparing kinetic interception with Stochastic Mission Kill (SMK).*
+* **Figure 4:** CEP expansion pathways showing median divergence of 7.8 m.
 
-### Figure 2: EKF Attack Surface
-![Figure 2](Figure2_EKF_Attack_Surface.png)
-*Detailed signal flow showing where sub-threshold bias and covariance inflation ($R_k$) are injected.*
+* **Figure 5:** NIS gate compliance confirming the stealthy nature of structured perturbations.
 
-### Figure 3: Temporal Evolution of $\Gamma(t)$
-![Figure 3](Figure3_Temporal_Evolution.png)
-*Evolution of the instability number demonstrating the "Confidently Wrong" regime. Threshold crossing ($\Gamma_{crit} \approx 6.5$) is achieved at $T \approx 11$ minutes.*
-
-### Figure 4: The Sophistication Paradox
-![Figure 4](Figure4_Sophistication_Paradox.png)
-*Plot of the Vulnerability Index ($V_i$) against guidance sophistication, demonstrating that higher-precision GNC systems exhibit a larger estimator attack surface.*
-
-### Figure 5: CEP Expansion Pathways
-![Figure 5](Figure5_CEP_Expansion.png)
-*Comparative expansion pathways across threat classes, illustrating the **Sophistication Paradox**.*
-
-### Figure 6: Interception Economics
-![Figure 6](Figure6_Interception_Economics.png)
-*Cost-per-engagement comparison. The SMK constellation is hypothesised to achieve economic reversal with an amortised engagement cost of **~$750K ($0.75M)**.*
-
-## 🎥 SMK Video
-[▶ Watch the SMK validation video](./stochastic_mission_kill.mp4)
+## 📊 Key Dimensionless Metrics
+[cite_start]The framework introduces four primary metrics to quantify the estimator-collapse regime[cite: 979, 1215]:
+* [cite_start]**$\Gamma(t)$**: **Estimator Instability Number**, defined as the ratio of actual Mean Squared Error (MSE) under perturbation to nominal MSE[cite: 1038].
+* [cite_start]**MKI**: **Mission Kill Index**, defined as the ratio of the expanded Circular Error Probable (CEP) to the operational tolerance radius $R_L$[cite: 1050, 1051].
+* [cite_start]**$\eta_{info}$**: **Information-to-Energy Yield**, quantifying the uncertainty-generation efficiency of a perturbation mechanism using differential Shannon entropy $\Delta h(X)$[cite: 1056, 1058].
+* **$R_{IE}$**: **Economic Reversal Ratio**, comparing the amortised cost of an SMK engagement to the unit cost of the threat[cite: 1177, 1178].
 
 ## 🔗 Repository and Archival Record
-This GitHub repository contains the active development version of the ECT framework. The corresponding archived and citable release is available on Zenodo:
-**DOI:** [10.5281/zenodo.19450239](https://doi.org/10.5281/zenodo.19450239)
+The archived, citable version of this release is available on Zenodo:  
+[cite_start]**DOI:** 10.5281/zenodo.19469720 [cite: 1071, 1227]
 
 ## 📖 Citation
-If you use this work, please cite:
-> Barua, N. (2026). *Estimator Collapse Theory: Stochastic Mission Kill for Ballistic Interception*. Zenodo. https://doi.org/10.5281/zenodo.19469720
-
-## 🚀 Quick Start
-```bash
-# Clone the repository
-git clone [https://github.com/Nick-Barua/Estimator-Collapse-Theory-ECT-Framework.git](https://github.com/Nick-Barua/Estimator-Collapse-Theory-ECT-Framework.git)
-
-# Enter the directory
-cd Estimator-Collapse-Theory-ECT-Framework
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the EKF scalar demonstration (Matches Section 2.5 results)
-python ekf_scalar_demo.py
+If you use this work, please cite:  
+Barua, N. (2026). *The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures*. [cite_start]Zenodo. https://doi.org/10.5281/zenodo.19469720 [cite: 1227]
