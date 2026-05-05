@@ -11,7 +11,7 @@
 ---
 
 <div align="center">
-  <img src="Graphical_Abstract.jpg.webp" width="900" alt="Graphical Abstract: Estimator Collapse Theory">
+  <img src="Graphical_Abstract.png" width="900" alt="Graphical Abstract: Estimator Collapse Theory">
   <br><em>Graphical Abstract — Estimator Collapse Theory & The Sophistication Paradox</em>
 </div>
 
@@ -31,7 +31,7 @@ ECT identifies a class of **sub-threshold structured perturbations** — bounded
 
 The video below evaluates the real-time transition from nominal state estimation to estimator collapse under structured perturbation.
 
-https://github.com/Nick-Barua/Estimator-Collapse-Theory-ECT-Framework/blob/main/ECT_SMK_Conceptual_Overview.mp4
+https://github.com/Nick-Barua/Estimator-Collapse-Theory-ECT-Framework/blob/main/ECT_SMK_Conceptual_Overview.mp4.mp4
 
 | Panel | Description |
 |-------|-------------|
@@ -123,3 +123,64 @@ Standard innovation-based monitoring (NIS/NEES) is insufficient for this perturb
 ---
 
 ## 📂 Repository Structure
+
+Estimator-Collapse-Theory-ECT-Framework/
+├── ECT_3D_Simulation_v141.py               # Core 3-D dual-sensor Monte Carlo simulation
+├── requirements.txt                         # Python dependencies
+├── Barua_ECT_SupplementaryVideo_S1.mp4      # Simulation dashboard (Supplementary Video S1)
+├── ECT_SMK_Conceptual_Overview.mp4.mp4      # SMK failure transition visualisation
+├── Graphical_Abstract.png                   # Archival graphical abstract, 300 DPI
+├── Figures/                                 # High-resolution validation figures (600 DPI)
+│   ├── Figure_1.png                         # EKF loop and perturbation entry points
+│   ├── Figure_2.png                         # Γ(t) temporal evolution
+│   ├── Figure_3.png                         # Monte Carlo Γ(t) distribution
+│   ├── Figure_4.png                         # CEP expansion results
+│   └── Figure_5.png                         # NIS gate compliance
+├── Citation                                 # Citation file
+└── LICENSE                                  # Apache 2.0
+
+---
+
+## 🚀 Quick Start
+
+```bash
+git clone https://github.com/Nick-Barua/Estimator-Collapse-Theory-ECT-Framework.git
+cd Estimator-Collapse-Theory-ECT-Framework
+pip install -r requirements.txt
+python ECT_3D_Simulation_v141.py
+```
+
+Expected runtime: ~2–5 minutes on a standard desktop. Reproduces all figures in the manuscript.
+
+---
+
+## 📖 Citation
+
+```bibtex
+@software{barua_ect_2026,
+  author       = {Barua, Nick},
+  title        = {{Estimator Collapse Theory (ECT) Framework}},
+  year         = {2026},
+  publisher    = {Zenodo},
+  version      = {v1.4.2},
+  doi          = {10.5281/zenodo.20037820},
+  url          = {https://doi.org/10.5281/zenodo.20037820}
+}
+```
+
+**Associated paper:**
+> Barua, N. (2026). *The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures*. Manuscript in preparation for submission to CEAS Aeronautical Journal.
+
+**Concept DOI (all versions):** https://doi.org/10.5281/zenodo.19469720
+
+---
+
+## ⚠️ Scope and Limitations
+
+This simulation constitutes a constructive plausibility proof that gate-compliant estimator divergence is mathematically reachable under representative autonomous navigation conditions. It is not a surrogate for full 6-DOF flight dynamics modelling. The kinematic EKF excludes closed-loop GNC feedback; 6-DOF aerodynamic validation is deferred to Phase I of the validation roadmap.
+
+Future work must address: (1) multi-epoch detection evasion via coloured-noise injection sequences; (2) the adaptive filter race condition under simultaneous Q/R perturbation; (3) gate-compliance synthesis for UKF sigma-point architectures.
+
+---
+
+*© 2026 Nick Barua. Licensed under Apache 2.0.*
