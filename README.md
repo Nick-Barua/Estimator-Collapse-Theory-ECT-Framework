@@ -1,3 +1,17 @@
+# The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures 📉
+
+### **Formal Implementation of the Estimator Collapse Theory (ECT) Framework**
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18824297.svg)](https://doi.org/10.5281/zenodo.18824297)
+
+> **Note:** This repository hosts the code and formal proofs for the ECT framework as described in the 2026 manuscript of the same name.
+
+---
+
+### **Project Overview**
+The **Estimator Collapse Theory (ECT)** framework formalizes the conditions under which traditional Bayesian estimators fail when encountering out-of-distribution (OOD) human postures.
+
+
 # The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20037820.svg)](https://doi.org/10.5281/zenodo.20037820)
