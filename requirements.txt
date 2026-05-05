@@ -1,5 +1,9 @@
-numpy
+# Core Math and State Estimation
+numpy>=1.24.0
+scipy>=1.10.0
 
-matplotlib
+# Visualization and Plotting
+matplotlib>=3.7.0
 
-scipy
+# Simulation Utilities
+tqdm>=4.65.0
