@@ -2,7 +2,7 @@
 
 ### **Formal Implementation of the Estimator Collapse Theory (ECT) Framework**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18824297.svg)](https://doi.org/10.5281/zenodo.18824297)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20037820.svg)](https://doi.org/10.5281/zenodo.20037820)
 
 > **Note:** This repository hosts the code and formal proofs for the ECT framework as described in the 2026 manuscript of the same name.
 
