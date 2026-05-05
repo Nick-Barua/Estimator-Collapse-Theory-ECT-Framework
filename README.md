@@ -1,6 +1,6 @@
 # The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19469720.svg)](https://doi.org/10.5281/zenodo.19469720)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20033386.svg)](https://doi.org/10.5281/zenodo.20033386)
 **Version:** v1.4.1 – 3-D Kinematic Release (May 2026)
 
 <div align="center">
@@ -8,7 +8,7 @@
 </div>
 
 ## 📌 Overview
-This repository provides the reference implementation and Monte Carlo validation scripts for **Estimator Collapse Theory (ECT)**. ECT is a systems-theoretic framework that characterises how guidance-critical state-estimation destabilisation constitutes a failure pathway for precision autonomous navigation architectures. 
+This repository provides the reference implementation, Monte Carlo validation scripts, and video demonstrations for **Estimator Collapse Theory (ECT)**. ECT is a systems-theoretic framework that characterises how guidance-critical state-estimation destabilisation constitutes a failure pathway for precision autonomous navigation architectures.
 
 The framework identifies a class of sub-threshold perturbations—bounded measurement disturbances calibrated to remain within statistical gating thresholds—that systematically corrupt the state estimate of an Extended Kalman Filter (EKF). In this regime, the system reports high confidence in a position estimate that no longer satisfies operational accuracy requirements.
 
@@ -48,10 +48,10 @@ The included `ECT_3D_Simulation_v141.py` reproduces the empirical results descri
 
 ## 📊 Dimensionless Metrics
 The framework introduces four primary metrics to quantify the estimator-collapse regime:
-1.  **Estimator Instability Number $\Gamma(t)$:** Ratio of actual MSE under perturbation to nominal MSE.
-2.  **Mission Kill Index (MKI):** Ratio of expanded CEP to the operational failure threshold $R_L$.
-3.  **Information-to-Energy Yield $\eta_{info}$:** Efficiency of uncertainty generation using differential Shannon entropy $\Delta h(X)$.
-4.  **Economic Reversal Ratio $R_{IE}$:** Analytical metric for cost-benefit comparison, reserved for future characterisation.
+1. **Estimator Instability Number $\Gamma(t)$:** Ratio of actual MSE under perturbation to nominal MSE.
+2. **Mission Kill Index (MKI):** Ratio of expanded CEP to the operational failure threshold $R_L$.
+3. **Information-to-Energy Yield $\eta_{info}$:** Efficiency of uncertainty generation using differential Shannon entropy $\Delta h(X)$.
+4. **Economic Reversal Ratio $R_{IE}$:** Analytical metric for cost-benefit comparison, reserved for future characterisation.
 
 <div align="center">
   <img src="Figures/Figure_3.png" width="420"> <img src="Figures/Figure_4.png" width="420">
@@ -67,12 +67,15 @@ Beyond standard innovation-based monitoring (NIS/NEES), maintaining estimator co
 </div>
 
 ## 📂 Repository Structure
-* `ECT_3D_Simulation_v141.py`: Core Monte Carlo simulation script.
+* `ECT_3D_Simulation_v141.py`: Core 3-D dual-sensor Monte Carlo simulation script.
+* `Barua_ECT_SupplementaryVideo_S1.mp4`: Monte Carlo simulation dashboard (Supplementary Video S1).
+* `ECT_SMK_Conceptual_Overview.mp4.mp4`: Conceptual visualisation of the SMK failure transition.
 * `Graphical_Abstract.jpg.webp`: Visual summary of the framework and resilience pathways.
-* `ECT_SMK_Conceptual_Overview.mp4.mp4`: Transition visualisation.
 * `Figures/`: High-resolution technical plots for manuscript validation.
 
 ## 📖 Citation
 The archived version of this release is available on Zenodo. If you use this framework in your research, please cite:
 
-> Barua, N. (2026). *The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures*. Zenodo. https://doi.org/10.5281/zenodo.19469720
+> Barua, N. (2026). *The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures*. Zenodo. https://doi.org/10.5281/zenodo.20033386
+
+For the concept DOI (all versions): https://doi.org/10.5281/zenodo.19469720
