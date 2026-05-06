@@ -172,7 +172,7 @@ Expected runtime: ~2–5 minutes on a standard desktop. Reproduces all figures i
 
 ```bibtex
 @software{barua_ect_2026,
-  author       = {Barua, Nick},
+  author       = {Barua, Nick and Douglas, R. J.},
   title        = {{Estimator Collapse Theory (ECT) Framework}},
   year         = {2026},
   publisher    = {Zenodo},
@@ -183,7 +183,7 @@ Expected runtime: ~2–5 minutes on a standard desktop. Reproduces all figures i
 ```
 
 **Associated paper:**
-> Barua, N. (2026). *The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures*. Manuscript in preparation for submission to CEAS Aeronautical Journal.
+> Barua, N., & Douglas, R. J. (2026). The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures. Manuscript in preparation for submission to CEAS Aeronautical Journal.
 
 **Concept DOI (all versions):** https://doi.org/10.5281/zenodo.19469720
 
