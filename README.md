@@ -1,6 +1,11 @@
-# The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures 📉
+# The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures
 
-### **Formal Implementation of the Estimator Collapse Theory (ECT) Framework**
+**Nick Barua¹·² and Robert J. Douglas¹·³**
+
+¹ *AN Holdings CO., Nishinomiya, Japan* ² *Kobe Gakuin University, Kobe, Japan* ³ *Kobe Design Lab, Kobe, Japan*
+
+**Correspondence:** Nick Barua: [s.nick.barua@gmail.com](mailto:s.nick.barua@gmail.com)  
+Robert J. Douglas: [robert@kobedesignlab.com](mailto:robert@kobedesignlab.com)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20037820.svg)](https://doi.org/10.5281/zenodo.20037820)
 
