@@ -5,7 +5,7 @@
 ---
 
 ### **Project Overview**
-The **Estimator Collapse Theory (ECT)** framework formalizes the conditions under which traditional Bayesian estimators fail when encountering out-of-distribution (OOD) human postures.
+The **Estimator Collapse Theory (ECT)** framework formalises a failure pathway in recursive state estimators where sub-threshold structured perturbations induce silent divergence while standard statistical monitors report nominal behaviour.
 
 
 # The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures
@@ -183,7 +183,7 @@ Expected runtime: ~2–5 minutes on a standard desktop. Reproduces all figures i
 **Associated paper:**
 > Barua, N., & Douglas, R. J. (2026). The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures. Manuscript in preparation for submission to CEAS Aeronautical Journal.
 
-**Concept DOI (all versions):** [https://doi.org/10.5281/zenodo.20037820]
+**Concept DOI (all versions):** [https://doi.org/10.5281/zenodo.19450238](https://doi.org/10.5281/zenodo.19450238)
 ---
 
 ## ⚠️ Scope and Limitations
