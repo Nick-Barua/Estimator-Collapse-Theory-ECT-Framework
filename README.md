@@ -22,7 +22,7 @@
 
 ## 📌 Overview
 
-This repository provides the reference implementation and Monte Carlo validation suite for **Estimator Collapse Theory (ECT)** — a systems-theoretic framework characterising how state-estimation destabilisation constitutes a formal failure pathway in precision autonomous navigation architectures.
+This repository provides the reference implementation and Monte Carlo validation suite for **Estimator Collapse Theory (ECT)**. ECT formalises a failure pathway in recursive state estimators where sub-threshold structured perturbations induce silent divergence while standard statistical health monitors report nominal behaviour.
 
 The central finding is a binary **"Confidently Wrong"** result: under gate-compliant perturbations, the filter's self-reported uncertainty (CEP) remains stable whilst actual position error (TPE) diverges beyond operational requirements. This occurs because sub-threshold disturbances remain statistically indistinguishable from noise at the single-epoch level but accumulate systematically across updates.
 
