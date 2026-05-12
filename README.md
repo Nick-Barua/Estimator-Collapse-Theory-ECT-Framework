@@ -1,6 +1,6 @@
 # The Sophistication Paradox: Estimator Collapse Theory (ECT) Framework
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20132174.svg)](https://doi.org/10.5281/zenodo.20132174)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20132174-blue?style=flat-square)](https://doi.org/10.5281/zenodo.20132174)
 [![Version](https://img.shields.io/badge/version-v2.1.0-blue)](https://github.com/Nick-Barua/Estimator-Collapse-Theory-ECT-Framework/releases/tag/v2.1-final)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
 
