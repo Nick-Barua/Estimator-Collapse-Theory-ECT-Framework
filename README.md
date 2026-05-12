@@ -1,6 +1,6 @@
 # The Sophistication Paradox: Estimator Collapse Theory (ECT) Framework
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20131335.svg)](https://doi.org/10.5281/zenodo.20131335)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20132174.svg)](https://doi.org/10.5281/zenodo.20132174)
 [![Version](https://img.shields.io/badge/version-v2.1.0-blue)](https://github.com/Nick-Barua/Estimator-Collapse-Theory-ECT-Framework/releases/tag/v2.1-final)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
 
@@ -202,7 +202,7 @@ If you use this code or framework, please cite the companion paper and this repo
   author  = {Barua, Nick and Douglas, Robert J.},
   journal = {CEAS Aeronautical Journal},
   year    = {2026},
-  note    = {Submitted}
+  note    = {Will be submitted}
 }
 
 @software{barua2026ect,
@@ -210,8 +210,8 @@ If you use this code or framework, please cite the companion paper and this repo
   title     = {The Sophistication Paradox: Estimator Collapse Theory (ECT) Framework v2.1.0},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.20131335},
-  url       = {https://doi.org/10.5281/zenodo.20131335}
+  doi       = {10.5281/zenodo.20132174},
+  url       = {https://doi.org/10.5281/zenodo.20132174}
 }
 ```
 
