@@ -2,10 +2,9 @@
 
 **The Sophistication Paradox: A Systems-Theoretic Framework for Estimator Collapse in Precision-Guided Autonomous Navigation Architectures**
 
-**Nick Barua¹²  ·  Robert J. Douglas¹³**
+**Nick Barua¹  ·  Robert J. Douglas¹³**
 
 ¹ AN Holdings CO., Nishinomiya, Japan  
-² Kobe Gakuin University, Kobe, Japan  
 ³ Kobe Design Lab, Kobe, Japan
 
 Correspondence: s.nick.barua@gmail.com
