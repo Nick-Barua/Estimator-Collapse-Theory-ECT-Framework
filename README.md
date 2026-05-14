@@ -50,7 +50,7 @@ The filter's self-reported uncertainty remained effectively invariant—a mean d
 
 The video below illustrates the real-time transition from nominal state estimation to Estimator Collapse under structured perturbation.
 
-https://github.com/Nick-Barua/Estimator-Collapse-Theory-ECT-Framework/blob/main/ECT_SMK_Conceptual_Overview.mp4
+[https://github.com/Nick-Barua/Estimator-Collapse-Theory-ECT-Framework/blob/main/ECT_SMK_Conceptual_Overview.mp4](https://github.com/Nick-Barua/Estimator-Collapse-Theory-ECT-Framework/blob/main/Barua_ECT_SupplementaryVideo_v21.mp4)
 
 **Panel 1 — Instability Number:** Divergence between actual estimation error and filter-reported covariance, illustrating the loss of estimator consistency.  
 **Panel 2 — Telemetry:** Real-time tracking of the Mission Kill Index (MKI) as Γt crosses Γcrit = 6.5.  
@@ -185,7 +185,7 @@ For $R_L = 15$ m: MKI = 4.37 / 15 = 0.29 — below the kill threshold for this c
 
 ## Repository Structure
 ├── ECT_3D_Simulation_v2.1.py         # Archival Monte Carlo simulation (locked, seed 42)
-├── ECT_SMK_Conceptual_Overview.mp4   # Conceptual SMK failure transition visualisation
+├── Barua_ECT_SupplementaryVideo_v21.mp4   # Conceptual SMK failure transition visualisation
 ├── Graphical_Abstract.jpg.webp       # Visual framework summary
 ├── Figures/
 │   ├── Figure_1.png                  # EKF loop and perturbation entry points
