@@ -3,7 +3,7 @@
 
 ## Accuracy, coverage and finite-horizon monitoring
 
-**Nick Barua<sup>1,2</sup> · Robert J. Douglas<sup>1,3</sup>**
+**Nick Barua<sup>1,2</sup> · Robert J. Douglas<sup>3</sup>**
 
 <sup>1</sup> AN Holdings CO., Nishinomiya, Japan  
 <sup>2</sup> Department of Legal Medicine, Shiga University of Medical Science, Setatsukinowacho, Otsu, Shiga 520-2192, Japan  
