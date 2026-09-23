@@ -1,9 +1,11 @@
-![Status](https://img.shields.io/badge/status-manuscript%20prepared-blue)
-![Evidence](https://img.shields.io/badge/evidence-simulation%20only-orange)
-![Release](https://img.shields.io/badge/release-v7-brightgreen)
-![Code](https://img.shields.io/badge/code-v6.0.0-success)
-![Python](https://img.shields.io/badge/python-3.13.5-blue)
-![License](https://img.shields.io/badge/license-see%20LICENSE-lightgrey)
+[![Status](https://img.shields.io/badge/status-manuscript%20prepared-blue)](#)
+[![Evidence](https://img.shields.io/badge/evidence-simulation%20only-orange)](#)
+[![Release](https://img.shields.io/badge/release-v7-brightgreen)](#)
+[![Code](https://img.shields.io/badge/code-v6.0.0-success)](#)
+[![Python](https://img.shields.io/badge/python-3.13.5-blue)](#)
+[![License](https://img.shields.io/badge/license-Apache--2.0-lightgrey)](LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22915531.svg)](https://doi.org/10.5281/zenodo.22915531)
+
 # Auditing uncertainty in dual-sensor navigation
 
 ## Accuracy, coverage and finite-horizon monitoring
@@ -149,24 +151,58 @@ The repository-root v2.1 script and its `requirements.txt` are **legacy**, not t
 
 ## Version history and citation
 
-**v2.1** refers to the legacy root simulation. **v6.0.0** identifies the expanded numerical source release inside the supplementary package. **v7** identifies the associated manuscript/package revision, including its updated title and affiliation metadata. These are material-version labels, not an assertion that a new GitHub release or tag has been created.
+The current reproducibility package is **v7**, published on Zenodo on **23 September 2026**.
 
-The earlier README cited [10.5281/zenodo.20132174](https://doi.org/10.5281/zenodo.20132174) and the all-versions identifier [10.5281/zenodo.19469720](https://doi.org/10.5281/zenodo.19469720). They are retained here as historical pointers only. Neither is asserted to identify this v7 ZIP. A version-specific DOI should be added only after the revised files have actually been deposited and checked. Updating this README alone does not update a Zenodo record.
+### Current release
 
-Until a published article or verified current-package DOI is available, the manuscript can be identified without inventing a journal record:
+**Version v7 — Auditing uncertainty in dual-sensor navigation: accuracy, coverage and finite-horizon monitoring — Reproducibility package**
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22915531.svg)](https://doi.org/10.5281/zenodo.22915531)
+
+- **Version-specific DOI:** [10.5281/zenodo.22915531](https://doi.org/10.5281/zenodo.22915531)
+- **Numerical source release:** v6.0.0
+- **Manuscript/package revision:** v7
+- **Release date:** 23 September 2026
+- **Resource type:** Software
+- **Repository:** [Estimator-Collapse-Theory-ECT-Framework](https://github.com/Nick-Barua/Estimator-Collapse-Theory-ECT-Framework)
+
+The v7 archive contains the current supplementary methods, executable simulation and analysis code, numerical outputs, main and supplementary figures, environment records, and reproducibility checks supporting the revised study.
+
+### Version history
+
+Earlier Zenodo versions preserve the historical development of the project.
+
+- **v7 — current:** [10.5281/zenodo.22915531](https://doi.org/10.5281/zenodo.22915531)
+- **v2.1.0 — historical:** [10.5281/zenodo.20132174](https://doi.org/10.5281/zenodo.20132174)
+
+The project previously used the **Estimator Collapse Theory / Sophistication Paradox** framing. Earlier releases remain available for provenance and historical traceability, but their numerical interpretation and claims should not be treated as equivalent to the current v7 uncertainty-audit study.
+
+For citation of the **entire version family**, use the Zenodo concept DOI:
+
+[![DOI – all versions](https://zenodo.org/badge/DOI/10.5281/zenodo.19450238.svg)](https://doi.org/10.5281/zenodo.19450238)
+
+**All-versions DOI:** [10.5281/zenodo.19450238](https://doi.org/10.5281/zenodo.19450238)
+
+The concept DOI resolves to the latest version, whereas the version-specific DOI above permanently identifies the exact v7 archive used for the current manuscript.
+
+### Recommended citation
+
+> Barua, N., & Douglas, R. J. (2026). *Auditing uncertainty in dual-sensor navigation: accuracy, coverage and finite-horizon monitoring — Reproducibility package* (Version v7) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22915531
+
+### BibTeX
 
 ```bibtex
-@misc{barua_douglas2026uncertainty_audit,
-  author = {Barua, Nick and Douglas, Robert J.},
-  title = {Auditing uncertainty in dual-sensor navigation: accuracy, coverage and finite-horizon monitoring},
-  year = {2026},
-  howpublished = {GitHub repository and accompanying supplementary materials},
-  url = {https://github.com/Nick-Barua/Estimator-Collapse-Theory-ECT-Framework},
-  note = {Unpublished research manuscript; manuscript package v7; numerical release v6.0.0}
+@software{barua_douglas_2026_navigation_uncertainty,
+  author       = {Barua, Nick and Douglas, Robert J.},
+  title        = {Auditing uncertainty in dual-sensor navigation:
+                  accuracy, coverage and finite-horizon monitoring
+                  --- Reproducibility package},
+  year         = {2026},
+  publisher    = {Zenodo},
+  version      = {v7},
+  doi          = {10.5281/zenodo.22915531},
+  url          = {https://doi.org/10.5281/zenodo.22915531}
 }
-```
-
-For computational reuse, also record the actual repository commit used and the supplementary ZIP checksum. The software/materials citation is not evidence of journal acceptance.
 
 ## Scope, provenance and licence
 
