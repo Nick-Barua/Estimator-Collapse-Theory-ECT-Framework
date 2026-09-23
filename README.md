@@ -33,7 +33,7 @@ The primary model is a six-state position–velocity extended Kalman filter (EKF
 
 ## Current supplementary package
 
-**[Supplementary_Data_and_Code_v7.zip](Supplementary_Data_and_Code_v7.zip)** contains the public, identified supplementary files from manuscript package v7. The ZIP payload is unchanged from that package; only its external filename is versioned for this repository. It does not include the cover letter, internal journal-selection records or anonymous alternatives.
+**[Supplementary_Data_and_Code.zip](Supplementary_Data_and_Code.zip)** contains the public, identified supplementary files from manuscript package v7. The ZIP payload is unchanged from that package; only its external filename is versioned for this repository. It does not include the cover letter, internal journal-selection records or anonymous alternatives.
 
 After extracting into a separate directory, the contents include:
 
