@@ -1,4 +1,9 @@
-
+![Status](https://img.shields.io/badge/status-manuscript%20prepared-blue)
+![Evidence](https://img.shields.io/badge/evidence-simulation%20only-orange)
+![Release](https://img.shields.io/badge/release-v7-brightgreen)
+![Code](https://img.shields.io/badge/code-v6.0.0-success)
+![Python](https://img.shields.io/badge/python-3.13.5-blue)
+![License](https://img.shields.io/badge/license-see%20LICENSE-lightgrey)
 # Auditing uncertainty in dual-sensor navigation
 
 ## Accuracy, coverage and finite-horizon monitoring
