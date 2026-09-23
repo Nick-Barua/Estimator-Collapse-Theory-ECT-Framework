@@ -15,6 +15,15 @@
 <sup>3</sup> Kobe Design Lab, Kobe, Japan
 
 **Correspondence:** [s.nick.barua@gmail.com](mailto:s.nick.barua@gmail.com)
+## Graphical abstract
+
+> **Draft illustration — not for journal submission.** This AI-generated preview is included for discussion, not as a data-derived scientific figure. In its monitoring panel, **65.0% means endpoint error greater than 3 m AND no alarm**, not the overall no-alarm rate; the remaining **35.0% must not be labelled “Alarm”**. The miniature NIS curve and ellipse sketches are illustrative, not plots of the released numerical data. Use the results and figures in the supplementary package for quantitative interpretation.
+
+[![Draft graphical abstract: uncertainty audit in dual-sensor navigation](Graphical_Abstract.png)](Graphical_Abstract.png)
+
+*Click the image to view it at full size. All navigation observations and reference trajectories in this study are simulated.*
+
+---
 
 **Documentation updated:** 23 September 2026  
 **Current materials:** manuscript package **v7**; numerical release **v6.0.0**  
