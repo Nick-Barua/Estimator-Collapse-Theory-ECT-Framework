@@ -47,6 +47,35 @@ The primary model is a six-state position–velocity extended Kalman filter (EKF
 
 **All navigation observations and reference trajectories are simulated.** The package does not contain recorded-sensor, hardware or flight-test validation, and the results are not deployment guarantees.
 
+## Animated uncertainty-audit dashboard
+
+**[▶ Watch the video — 48 seconds · 1080p](Navigation_Uncertainty_Audit_Dashboard_v7.mp4)**
+
+This animated dashboard visualises the numerical study archived on
+[Zenodo, version v7](https://doi.org/10.5281/zenodo.22915531). It combines
+synchronised position-error and uncertainty-coverage plots, a simulation-time
+counter, a rotating three-dimensional normalised-error cloud, and a separate
+monitoring summary.
+
+The time histories come from the released numerical outputs. The error cloud
+replays the same 500 baseline seed pairs; its point colours indicate whether
+each error lies within the stated three-dimensional 95% uncertainty region.
+Camera rotation and sensor-flow animation are visual aids, not physical
+measurements.
+
+The monitoring panel distinguishes **endpoint error greater than 3 m AND no
+alarm (65.0%)** from the separately measured **biased-trajectory alarm
+fraction (24.6%)**. These are different statistics and must not be interpreted
+as complementary percentages.
+
+> **Scope and provenance:** All navigation observations and reference
+> trajectories are simulated. This explanatory video was prepared after
+> manuscript submission. It is not part of the submitted journal supplement
+> or the frozen Zenodo v7 archive, and it does not add independent simulation
+> trials or hardware validation.
+
+---
+
 ## Current supplementary package
 
 **[Supplementary_Data_and_Code.zip](Supplementary_Data_and_Code.zip)** contains the public, identified supplementary files from manuscript package v7. The ZIP payload is unchanged from that package; only its external filename is versioned for this repository. It does not include the cover letter, internal journal-selection records or anonymous alternatives.
