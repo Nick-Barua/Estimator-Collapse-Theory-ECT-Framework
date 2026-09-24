@@ -49,30 +49,33 @@ The primary model is a six-state position–velocity extended Kalman filter (EKF
 
 ## Animated uncertainty-audit dashboard
 
-**[▶ Watch the video — 48 seconds · 1080p](Navigation_Uncertainty_Audit_Dashboard_v7.mp4)**
+▶ **[Watch the animated uncertainty-audit dashboard — 48 seconds · 1080p](Navigation_Uncertainty_Audit_Dashboard.mp4)**
 
-This animated dashboard visualises the numerical study archived on
-[Zenodo, version v7](https://doi.org/10.5281/zenodo.22915531). It combines
-synchronised position-error and uncertainty-coverage plots, a simulation-time
-counter, a rotating three-dimensional normalised-error cloud, and a separate
-monitoring summary.
+This animated dashboard provides a visual overview of the numerical study archived in
+[Zenodo v7](https://doi.org/10.5281/zenodo.22915531).
 
-The time histories come from the released numerical outputs. The error cloud
-replays the same 500 baseline seed pairs; its point colours indicate whether
-each error lies within the stated three-dimensional 95% uncertainty region.
-Camera rotation and sensor-flow animation are visual aids, not physical
-measurements.
+It combines synchronised position-error and uncertainty-coverage traces, an accelerated
+simulation-time display, a rotating three-dimensional normalised-error cloud, and a
+separate finite-horizon monitoring summary.
 
-The monitoring panel distinguishes **endpoint error greater than 3 m AND no
-alarm (65.0%)** from the separately measured **biased-trajectory alarm
-fraction (24.6%)**. These are different statistics and must not be interpreted
-as complementary percentages.
+The plotted time histories are derived from the released numerical outputs. The
+three-dimensional error cloud replays the same 500 baseline simulation pairs and
+indicates whether each normalised position error lies inside or outside the stated
+95% uncertainty region. Camera rotation and sensor-flow animations are visual aids
+only and do not represent additional measurements or experiments.
 
-> **Scope and provenance:** All navigation observations and reference
-> trajectories are simulated. This explanatory video was prepared after
-> manuscript submission. It is not part of the submitted journal supplement
-> or the frozen Zenodo v7 archive, and it does not add independent simulation
-> trials or hardware validation.
+The monitoring panel deliberately distinguishes two different quantities:
+
+- **65.0%** — endpoint position error greater than 3 m **and no alarm** during the declared interval.
+- **24.6%** — biased-trajectory alarm fraction for the independently calibrated innovation-mean monitor at the 5% nominal calibration target.
+
+These percentages are not complementary quantities.
+
+> **Scope and provenance:** All navigation observations and reference trajectories
+> are simulated. This explanatory dashboard was prepared after manuscript submission.
+> It is not part of the submitted journal supplementary material or the frozen Zenodo
+> v7 archive, and it does not introduce new simulation trials, field measurements,
+> hardware validation, or deployment claims.
 
 ---
 
